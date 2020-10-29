@@ -6,6 +6,7 @@
 
     font-size: 200px;
     text-align: center;
+    margin: 0 auto;
 }
 
 .player{
@@ -19,5 +20,31 @@
     width: 85px;
     height: 15px;
     background-color: green;
+    position: absolute;
+}
+
+.customButtom{
+    border: 1px;
+    border-color: red;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#start_menu_text{
+    font-size: 30px;
+    text-align: center;
+    position: absolute;
+}
+
+
+#restart_menu_text{
+    font-size: 30px;
+    text-align: center;
     position: absolute;
 }

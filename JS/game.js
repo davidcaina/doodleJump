@@ -8,6 +8,6 @@
             document.addEventListener('keyup', controls);
         }
     }
-    start();
+    //start();
 
     
