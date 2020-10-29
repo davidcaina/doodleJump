@@ -1,6 +1,7 @@
     // Elements
     const grid = document.querySelector('.grid');
     const player = document.createElement('div');
+
     const num_platforms = 5;
 
     let platforms_array = [];
@@ -14,6 +15,11 @@
     let player_leftSpace = 50;
     let player_startPoint = 150;
     let player_bootomSpace = player_startPoint;
+
+    let anvil_leftSpace;
+    let anvil_bootomSpace;
+    let anvil_startPoint;
+    let anvilTimerId;
     
     let upTimerId;
     let downTimerId;
@@ -24,6 +30,7 @@
     let isGoingLeft = false;
     let isGoingRight = false;
 
+    let currentAnvil;
 
     function jump(){
         clearInterval(downTimerId);
@@ -54,7 +61,6 @@
                    ((player_leftSpace + 60) >= platform.left) &&
                    (player_leftSpace <= (platform.left + 85)) &&
                    (!isJumping)){
-                    console.log('OK');
                     player_startPoint = player_bootomSpace;
                     jump();
                     }
@@ -74,6 +80,7 @@
         clearInterval(downTimerId);
         clearInterval(leftTimerId);
         clearInterval(rightTimerId);
+        clearInterval(anvilTimerId);
     }
 
     function controls(e){

@@ -11,8 +11,9 @@
             setInterval(movePlatforms, 30);
             jump();
             document.addEventListener('keyup', controls);
+            createWarningArrow(5, 500, player_leftSpace);
         }
     }
-    //start();
+    start();
 
-    createWarningArrow(5, 500);
+    
